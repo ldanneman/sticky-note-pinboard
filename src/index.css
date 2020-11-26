@@ -109,7 +109,11 @@ code {
   height: 60%;
 
 }
-
+input{
+   margin: 15px 5px 5px 5px;
+   border-radius: 1rem;
+   width: 90%;
+}
 textarea {
   margin: 5px;
   border-radius: 1rem;
@@ -122,7 +126,7 @@ textarea {
 
 button {
   margin: 5px;
-  width: 90%;
+  width: 95%;
   border-radius: 2rem;
 }
 
@@ -135,4 +139,9 @@ button {
 .ike {
   position: absolute;
   bottom: 0;
+}
+
+.title {
+  text-decoration: underline;
+  font-weight: bold;
 }

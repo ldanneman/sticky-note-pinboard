@@ -5,7 +5,7 @@ const InputForm = (props) => {
         <>
              <form id="to-do-form" className="Form" onSubmit={props.addItem}>
                 <div className="FormArea">
-                    <input />
+                    <input type="text" placeholder="Enter Text" value={props.currentItem.title} onChange={ props.handleTitle}/>
             <textarea type="text" placeholder="Enter Text" value={props.currentItem.text} onChange={ props.handleInput}></textarea>
                 <button type="submit">Add</button>
                 </div>

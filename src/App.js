@@ -13,32 +13,30 @@ class App extends React.Component {
       items: [],
       currentItem: {
         text: '',
-        key: ''
+        key: '',
+        title: ''
       }
     }
     this.handleInput = this.handleInput.bind(this);
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
+    this.handleTitle = this.handleTitle.bind(this);
   }
-  henadleTitle(e) {
-    this.setState({
-      
-    })
+  handleTitle(e) {
+    let state = this.state
+    state.currentItem.title = e.target.value
+    this.setState(state)
   }
   handleInput(e) {
-    this.setState({
-     
-        currentItem: {
-          text: e.target.value,
-          key: Date.now()
-        }
-      })
+    let state = this.state
+    state.currentItem.text = e.target.value
+    state.currentItem.key = Date.now()
+    this.setState(state)
   }
   
   addItem(e) {
     e.preventDefault();
     const newItem = this.state.currentItem;
-    console.log(newItem);
     if (newItem.text !== "") {
       const newItems = [...this.state.items, newItem];
       this.setState({
@@ -63,8 +61,7 @@ class App extends React.Component {
       
       <div className="App">
         <div className="border">
-      
-          <InputForm addItem={this.addItem} handleInput={this.handleInput} currentItem={this.state.currentItem }/>
+          <InputForm addItem={this.addItem} handleInput={this.handleInput} handleTitle={this.handleTitle} currentItem={this.state.currentItem }/>
       <div className="Pinboard">
         <ListItems items={this.state.items}
           deleteItem={this.deleteItem}
@@ -72,7 +69,6 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-        
     );
   }
 }

@@ -14,6 +14,8 @@ function ListItems(props) {
                     
                     
                     <div className='text'>
+                        <span className="title">{item.title}</span>
+                        <br/>
                         {item.text}
                 
                     </div>
@@ -25,17 +27,6 @@ function ListItems(props) {
                         
                     </div>
             </div>
-                
-                {/* <div>
-                    <div>
-                        <FontAwesomeIcon className="faicons" onClick={() => {
-                        props.deleteItem(item.key)
-                        }} icon="trash"
-                        />
-                    </div>
-                    {item.text}
-                    
-                </div> */}
                 
             </div>
         })
