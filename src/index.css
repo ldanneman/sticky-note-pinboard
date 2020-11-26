@@ -1,4 +1,5 @@
 body {
+  background: url("pexels-fwstudio-164005\(2\).jpg");
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,3 +12,84 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.App {
+  height: 100vh;
+  border: green 3px solid;
+
+
+}
+
+.Pinboard {
+  margin: 1rem 1% 1rem 0;
+
+  width: 100%;
+  height: 15rem;
+  border: 31px solid transparent;
+  border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
+  border-image-slice: 55 55;
+  overflow: hidden;
+
+  background: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110969/cork_w2tt25.jpg")
+    /* border: 4px solid yellow; */
+
+
+}
+
+
+
+/* STICKY NOTE  */
+
+/* .note {
+  width: 160px;
+  height: 160px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
+  float: left;
+  margin: 8px;
+  border: 1px solid rgba(0, 0, 0, .25);
+}
+
+.sticky1 {
+  background-color: #FFF780;
+}
+
+.text {
+  margin: 10px;
+  font-family: 'The Girl Next Door', cursive;
+}
+
+.pin {
+
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .55);
+  margin: 0 auto;
+  margin-top: 2px;
+  background-image: radial-gradient(blue 50%, white 100%);
+}
+
+.border {
+  display: flex;
+
+
+
+}
+
+.Form {
+  width: 15%;
+  margin: 1rem 2% 1rem 1%;
+  background: black;
+  color: white;
+  border-radius: 1rem;
+}
+
+textarea {
+  margin: ;
+  width: 100%;
+  height: 6rem;
+  background: transparent;
+  color: white;
+
+} */
