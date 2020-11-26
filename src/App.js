@@ -2,6 +2,7 @@ import React from "react"
 import ListItems from "./Listitems"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import InputForm from "./InputForm";
 
 library.add(faTrash);
 
@@ -19,9 +20,14 @@ class App extends React.Component {
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
   }
-
+  henadleTitle(e) {
+    this.setState({
+      
+    })
+  }
   handleInput(e) {
-      this.setState({
+    this.setState({
+     
         currentItem: {
           text: e.target.value,
           key: Date.now()
@@ -39,7 +45,8 @@ class App extends React.Component {
         items: newItems,
         currentItem: {
           text: '',
-          key: ''
+          key: '',
+          title: ''
         }
       })
     }
@@ -53,18 +60,11 @@ class App extends React.Component {
   }
   render() {
     return (
-      <header>
+      
       <div className="App">
         <div className="border">
       
-            <form id="to-do-form" className="Form" onSubmit={this.addItem}>
-              <div className="FormArea">
-            <textarea type="text" placeholder="Enter Text" value={this.state.currentItem.text} onChange={ this.handleInput}></textarea>
-
-        {/* <input type="text" placeholder="Enter Text" value={this.state.currentItem.text} onChange={ this.handleInput}/> */}
-                <button type="submit">Add</button>
-                </div>
-        </form>
+          <InputForm addItem={this.addItem} handleInput={this.handleInput} currentItem={this.state.currentItem }/>
       <div className="Pinboard">
         <ListItems items={this.state.items}
           deleteItem={this.deleteItem}
@@ -72,7 +72,7 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-        </header>
+        
     );
   }
 }
