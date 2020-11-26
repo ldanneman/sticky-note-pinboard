@@ -1,5 +1,9 @@
 import React from "react"
 import ListItems from "./Listitems"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faTrash);
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +17,7 @@ class App extends React.Component {
     }
     this.handleInput = this.handleInput.bind(this);
     this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
   handleInput(e) {
@@ -39,18 +44,35 @@ class App extends React.Component {
       })
     }
   }
-
+   deleteItem(key){
+    const filteredItems= this.state.items.filter(item =>
+      item.key!==key);
+    this.setState({
+      items: filteredItems
+    })
+  }
   render() {
     return (
-      <div>
       <header>
-        <form id="to-do-form" onSubmit={this.addItem}>
-        <input type="text" placeholder="Enter Text" value={this.state.currentItem.text} onChange={ this.handleInput}/>
-        <button type="submit">Add</button>
+      <div className="App">
+        <div className="border">
+      
+            <form id="to-do-form" className="Form" onSubmit={this.addItem}>
+              <div className="FormArea">
+            <textarea type="text" placeholder="Enter Text" value={this.state.currentItem.text} onChange={ this.handleInput}></textarea>
+
+        {/* <input type="text" placeholder="Enter Text" value={this.state.currentItem.text} onChange={ this.handleInput}/> */}
+                <button type="submit">Add</button>
+                </div>
         </form>
-      </header>
-        <ListItems items={this.state.items }/>
+      <div className="Pinboard">
+        <ListItems items={this.state.items}
+          deleteItem={this.deleteItem}
+            />
+            </div>
+          </div>
         </div>
+        </header>
     );
   }
 }
