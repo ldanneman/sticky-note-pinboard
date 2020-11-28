@@ -19,7 +19,6 @@ code {
 
 .App {
   height: 100vh;
-  border: green 3px solid;
 
 
 }
@@ -52,8 +51,11 @@ code {
   margin: 8px;
   border: 1px solid rgba(0, 0, 0, .25);
   position: relative;
+  cursor: pointer;
 
 }
+
+
 
 
 
@@ -109,13 +111,17 @@ code {
   height: 60%;
 
 }
-input{
-   margin: 15px 5px 5px 5px;
-   border-radius: 1rem;
-   width: 90%;
+
+.FormInput {
+  margin: 15px 5px 5px 5px;
+  border-radius: 1rem;
+  width: 90%;
+  padding: 5px 0 5px 5px;
 }
-textarea {
+
+.FormTextarea {
   margin: 5px;
+  padding: 5px 0 0 5px;
   border-radius: 1rem;
   width: 90%;
   height: 100%;
@@ -124,7 +130,7 @@ textarea {
 
 }
 
-button {
+.FormButton {
   margin: 5px;
   width: 95%;
   border-radius: 2rem;
@@ -139,9 +145,16 @@ button {
 .ike {
   position: absolute;
   bottom: 0;
+  cursor: pointer;
 }
 
 .title {
   text-decoration: underline;
   font-weight: bold;
+}
+
+.modalbutton {
+  /* width: 160px;
+  height: 160px;
+  z-index: -1; */
 }
