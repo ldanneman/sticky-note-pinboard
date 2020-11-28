@@ -1,8 +1,8 @@
 import React from "react"
-import ListItems from "./Listitems"
+import ListItems from "./components/Listitems"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import InputForm from "./InputForm";
+import InputForm from "./components/InputForm";
 
 library.add(faTrash);
 
@@ -50,7 +50,8 @@ class App extends React.Component {
       })
     }
   }
-   deleteItem(key){
+  deleteItem(e, key) {
+     e.stopPropagation()
     const filteredItems= this.state.items.filter(item =>
       item.key!==key);
     this.setState({
