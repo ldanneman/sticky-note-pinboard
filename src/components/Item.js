@@ -5,18 +5,14 @@ import ModalFunc from './Modal'
  const Item = (props) => {
     const [modalIsOpen, setModalIsOpen] = useState(false)
 
-    const [title, setTitle] = useState('')
-    const [text, setText] = useState('')
+    
 
     const closeModal = (e) => {
         e.stopPropagation()
         setModalIsOpen(false)
     }
 
-    const updateSave = (e) => {
-        props.updateItem(props.item.key, title, text)
-        closeModal(e)
-    }
+   
 
     return (
         <div className="list note sticky1" key={props.item.key} onClick={() => setModalIsOpen(true)}>
