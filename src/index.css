@@ -1,26 +1,20 @@
 body {
-  /* background: url("pexels-fwstudio-164005\(2\).jpg"); */
   background: antiquewhite;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-
 .App {
   height: 100vh;
-
-
 }
 
 .Pinboard {
@@ -32,65 +26,43 @@ code {
   border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
   border-image-slice: 55 55;
   overflow: hidden;
-
-  background: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110969/cork_w2tt25.jpg")
-    /* border: 4px solid yellow;  */
-
-
+  background: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110969/cork_w2tt25.jpg");
 }
-
-
 
 /* STICKY NOTE  */
 
 .note {
   width: 160px;
   height: 160px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   float: left;
   margin: 8px;
-  border: 1px solid rgba(0, 0, 0, .25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
   position: relative;
   cursor: pointer;
-
 }
 
-
-
-
-
 .sticky1 {
-  background-color: #FFF780;
-
+  background-color: #fff780;
 }
 
 .text {
   margin: 10px;
-  font-family: 'The Girl Next Door', cursive;
+  font-family: "The Girl Next Door", cursive;
 }
 
 .pin {
-
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .55);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
   margin: 0 auto;
   margin-top: 2px;
   background-image: radial-gradient(blue 50%, white 100%);
 }
 
-/* .svg-inline--fa {
-  display: inline;
-}
-.ike{
-  display:inline;
-} */
 .border {
   display: flex;
-
-
-
 }
 
 .Form {
@@ -101,15 +73,10 @@ code {
   border-radius: 2rem;
   border: silver 6px solid;
   border-style: ridge;
-  /* border: 20px solid transparent;
-   border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
-   border-image-slice: 55;
-   overflow: hidden; */
 }
 
 .FormArea {
   height: 60%;
-
 }
 
 .FormInput {
@@ -127,7 +94,6 @@ code {
   height: 100%;
   background: transparent;
   color: white;
-
 }
 
 .FormButton {
@@ -136,11 +102,6 @@ code {
   border-radius: 2rem;
 }
 
-/* .faicons{
-  position: absolute;
-  float: left;
-  border: 2px solid green;
-} */
 
 .ike {
   position: absolute;
@@ -153,19 +114,10 @@ code {
   font-weight: bold;
 }
 
-.modalbutton {
-  /* width: 160px;
-  height: 160px;
-  z-index: -1; */
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
 }
-
-/* content {
-  background-color: red;
-} */
-
-
-  input:focus,
-  textarea:focus,
-  select:focus, button:focus {
-    outline: none;
-  }
